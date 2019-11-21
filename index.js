@@ -127,6 +127,7 @@ module.exports = {
         "dot-notation": "error",
         "prefer-arrow-callback": "error",
         "guard-for-in": "error",
-        "no-whitespace-before-property": "error"
+        "no-whitespace-before-property": "error",
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
     }
 }
