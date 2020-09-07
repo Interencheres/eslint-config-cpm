@@ -40,6 +40,9 @@ module.exports = {
             "error",
             "as-needed"
         ],
+        "no-extra-parens": [
+            "error"
+        ],
         "comma-dangle": [
             "error",
             "never"
