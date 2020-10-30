@@ -1,5 +1,6 @@
 module.exports = {
     "rules": {
+        "no-magic-numbers": ["error", { ignore: [0, 1] }],
         "indent": [
             "error",
             4,
