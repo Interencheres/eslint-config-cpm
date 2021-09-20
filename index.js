@@ -15,6 +15,12 @@ module.exports = {
                 "no-magic-numbers": "off",
             },
         },
+        {
+            "files": ["commands/**/*.js"],
+            "rules": {
+                "no-console": "off"
+            }
+        }
     ],
     "rules": {
         "no-magic-numbers": ["error", { ignore: [0, 1] }],
@@ -154,6 +160,18 @@ module.exports = {
         "prefer-arrow-callback": "error",
         "guard-for-in": "error",
         "no-whitespace-before-property": "error",
-        "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "ignoreRestSiblings": true, "args": "after-used" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "ignoreRestSiblings": true, "args": "after-used" }],
+        "no-return-await": "error",
+        "no-console": "warn",
+        "no-shadow": "error",
+        "func-call-spacing": "error",
+        "object-curly-newline": ["error", {
+            "ObjectExpression": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ObjectPattern": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ImportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ExportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
+        }],
+        "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+        "space-before-block": "error"
     }
 }
