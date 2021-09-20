@@ -1,4 +1,21 @@
 module.exports = {
+    "root": true,
+    "env": {
+        "es2020": true,
+        "node": true,
+    },
+    "extends": ['eslint:recommended'],
+    "overrides": [
+        {
+            "files": ["*.spec.js"],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "no-magic-numbers": "off",
+            },
+        },
+    ],
     "rules": {
         "no-magic-numbers": ["error", { ignore: [0, 1] }],
         "indent": [
