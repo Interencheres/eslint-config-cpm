@@ -162,7 +162,7 @@ module.exports = {
         "no-whitespace-before-property": "error",
         "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "ignoreRestSiblings": true, "args": "after-used" }],
         "no-return-await": "error",
-        "no-console": "warn",
+        "no-console": "error",
         "no-shadow": "error",
         "func-call-spacing": "error",
         "object-curly-newline": ["error", {
