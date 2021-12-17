@@ -14,12 +14,6 @@ module.exports = {
             "rules": {
                 "no-magic-numbers": "off",
             },
-        },
-        {
-            "files": ["commands/**/*.js"],
-            "rules": {
-                "no-console": "off"
-            }
         }
     ],
     "rules": {
