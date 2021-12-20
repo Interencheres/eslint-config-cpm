@@ -1,4 +1,21 @@
 module.exports = {
+    "root": true,
+    "env": {
+        "es2020": true,
+        "node": true,
+    },
+    "extends": ['eslint:recommended'],
+    "overrides": [
+        {
+            "files": ["*.spec.js"],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "no-magic-numbers": "off",
+            },
+        }
+    ],
     "rules": {
         "no-magic-numbers": ["error", { ignore: [0, 1] }],
         "indent": [
@@ -70,11 +87,17 @@ module.exports = {
         ],
         "max-len": [
             "error",
-            110
+            120,
+            {
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreRegExpLiterals": true
+            }
         ],
         "max-depth": [
             "error",
-            2
+            3
         ],
         "max-statements-per-line": [
             "error",
@@ -86,7 +109,7 @@ module.exports = {
         ],
         "max-params": [
             "error",
-            4
+            6
         ],
         "complexity": [
             "error",
@@ -116,13 +139,12 @@ module.exports = {
         "no-useless-concat": "error",
         "space-before-function-paren": "error",
         "default-case": "error",
-        "no-case-declarations": "off",
         "no-trailing-spaces": "error",
         "no-multi-spaces": "error",
         "spaced-comment": "error",
         "comma-spacing": "error",
         "comma-style": "error",
-        "no-unneeded-ternary": "error",
+        "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
         "block-spacing": "error",
         "brace-style": "error",
         "key-spacing": "error",
@@ -132,6 +154,18 @@ module.exports = {
         "prefer-arrow-callback": "error",
         "guard-for-in": "error",
         "no-whitespace-before-property": "error",
-        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }],
+        "no-return-await": "error",
+        "no-console": "error",
+        "no-shadow": "error",
+        "func-call-spacing": "error",
+        "object-curly-newline": ["error", {
+            "ObjectExpression": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ObjectPattern": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ImportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
+            "ExportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
+        }],
+        "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+        "space-before-block": "error"
     }
 }
