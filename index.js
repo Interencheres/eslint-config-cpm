@@ -166,6 +166,6 @@ module.exports = {
             "ExportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
         }],
         "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
-        "space-before-block": "error"
+        "space-before-blocks": "error"
     }
 }
