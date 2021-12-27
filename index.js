@@ -17,7 +17,7 @@ module.exports = {
         }
     ],
     "rules": {
-        "no-magic-numbers": ["error", { ignore: [0, 1] }],
+        "no-magic-numbers": ["error", { "ignore": [0, 1, 1000], "ignoreArrayIndexes": true }],
         "indent": [
             "error",
             4,
