@@ -121,7 +121,7 @@ module.exports = {
         ],
         "camelcase": [
             "error",
-            { "properties": "never"}
+            { "properties": "never", "ignoreDestructuring": true }
         ],
         "prefer-const": "error",
         "no-var": "error",
